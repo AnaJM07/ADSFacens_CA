@@ -1,0 +1,67 @@
+import java.util.Scanner;;
+class Main {
+  public static void main(String[] args) {
+    int cpf,opcao,i = 0;
+    float senha1,  d, e, f,g; 
+   Scanner ler = new Scanner(System.in);
+  
+     System.out.println("Bem vindo!!!");
+     
+     System.out.println("------------");
+     
+     System.out.println("Por favor informe o numero do seu cpf");
+     cpf = ler.nextInt();
+     
+     if(cpf == 123.45678900)
+     {
+       System.out.println("Por favor informe sua senha");
+       senha1= ler.nextInt();
+        if(senha1 == 01020304)
+        {
+        do{
+           System.out.println("Opções");
+           System.out.println("1 - Saldo ");
+           System.out.println("2 - Depósito       ");
+           System.out.println("3 - Saque ");
+           System.out.println("0 - Sair ");
+           opcao = ler.nextInt();
+         
+          switch (opcao){
+           
+            case 1:
+              System.out.println("Seu saldo  atual é de R$ 1,000 ");
+              break;
+            
+            case 2: 
+              System.out.println("Informe o valor a ser depositado ");
+              d = ler.nextFloat();
+              e = d + 1000;
+              System.out.println("Seu saldo atual é "+ e );
+              break;
+           
+             case 3: 
+               System.out.println("Informe o valor a ser sacado ");
+              f = ler.nextFloat();
+              g = 1000 - f;
+             
+              System.out.println("Seu saldo atual é "+ g );
+              break;
+             
+            case 0:
+              System.out.println("Obrigada por utilizar o caixa eletrônico");
+              break;
+          }
+        }
+          while(i < 3);
+        
+        
+        }
+        else{
+          System.out.println("Senha Bloqueada");
+     }
+     }
+     else{
+       System.out.println("Cpf Invalido");
+     }
+  }
+}
